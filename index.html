@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="style.css" rel="stylesheet">
+
+    <!-- External stylesheet to use weather icons -->
+  <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+
+  <title>Wheather App by Karol Szpek</title>
+  
+</head>
+<body>
+    <div class="wrapper">
+        
+        <!-- Top container with searchbar, buttons and background logo -->
+        <div id="searchContainer">
+            <input type="text" class="searchControl" id="searchInput" placeholder="e.g. Warsaw">
+            <input type="button" class="searchControl" id="searchBtn" value="Get Weather">
+            <input type="button" class="searchControl" id="locationBtn" value="Get Location">
+        </div>
+
+        <!-- 2nd container with all the restof the content -->
+        <div class="weatherContainer">
+                
+                <!-- Weather at the moment -->
+                <div class="currentWeather">
+                <div class="weatherMain">
+                        <a id = "map-link" target="_blank"></a>
+                        <div id="location"></div>
+                        <div id="now-when"></div>
+                        <div id="now-img"></div>
+                        <div id="now-description"></div>
+                        <div id="now-temp"></div>
+                        <div id="now-pressure"> </div>
+                        <div id="now-humidity"></div>
+                        <div id="now-windspeed"></div>
+                        <div id="now-clouds"></div>
+                    </div> 
+                </div>
+                
+                <!-- Future days container -->
+                <div class="futureWeather">
+
+                    <!-- Tommorow / weather in 1 day-->
+                    <div id="forecast-tommorow" class="forecast-tommorow">
+                            <h1 id="tommorow-when"></h1>
+                            <div id="tommorow-img" class="img"></div>
+                            <div id="tommorow-description"></div>
+                            <div id="tommorow-temp"></div>
+                             
+                                <!-- The Modal -->
+                                <div id="myModal1" class="modal1">
+
+                                 <!-- Modal content -->
+                                    <div class="modal1-content">
+                                        <div class="header-tommorow">
+                                            <span class="close1">&times;</span>
+                                            <h2>More details</h2>
+                                        </div>
+                                        <div class="modal1-body">
+                                            <div id="tommorow-pressure"></div>
+                                            <div id="tommorow-humidity"></div>
+                                            <div id="tommorow-windspeed"></div>
+                                            <div id="tommorow-clouds"></div>
+                                        </div>
+                                        <div class="modal1-footer">
+                                            <h2></h2>
+                                        </div>
+                                    </div> 
+                                </div>
+                    </div>
+
+                    <!-- Day after tommorow / weather in 2 days -->
+                    <div id="forecast-2nd" class="forecast-2nd">
+                            <h1 id="2nd-when"></h1>
+                            <div id="2nd-img" class="img"></div>
+                            <div id="2nd-description"></div>
+                            <div id="2nd-temp"></div>
+
+                            <!-- The Modal -->
+                            <div id="myModal2" class="modal2">
+
+                             <!-- Modal content -->
+                                <div class="modal2-content">
+                                    <div class="header-2nd">
+                                        <span class="close2">&times;</span>
+                                        <h2>More details</h2>
+                                    </div>
+                                    <div class="modal2-body">
+                                            <div id="2nd-pressure"> </div>
+                                            <div id="2nd-pressure"> </div>
+                                            <div id="2nd-humidity"></div>
+                                            <div id="2nd-windspeed"></div>
+                                            <div id="2nd-clouds"></div>
+                                    </div>
+                                    <div class="modal2-footer">
+                                    <h2></h2>
+                                    </div>
+                                </div>
+                            </div> 
+                    </div>
+
+                    <!-- weather in 3 days -->
+                    <div id="forecast-3rd" class="forecast-3rd">
+                            <h1 id="3rd-when"></h1>
+                            <div id="3rd-img" class="img"></div>
+                            <div id="3rd-description"></div>
+                            <div id="3rd-temp"></div>
+
+                            <!-- The Modal -->
+                            <div id="myModal3" class="modal3">
+
+                             <!-- Modal content -->
+                                <div class="modal3-content">
+                                    <div class="header-3rd">
+                                        <span class="close3">&times;</span>
+                                        <h2>More details</h2>
+                                    </div>
+                                    <div class="modal3-body">
+                                            <div id="3rd-pressure"> </div>
+                                            <div id="3rd-humidity"></div>
+                                            <div id="3rd-windspeed"></div>
+                                            <div id="3rd-clouds"></div>
+                                    </div>
+                                    <div class="modal3-footer">
+                                    <h2></h2>
+                                    </div>
+                                </div> 
+                            </div>
+                    </div>
+
+                    <!-- weather in 4 days -->
+                    <div id="forecast-4th" class="forecast-4th">
+                            <h1 id="4th-when"></h1>
+                            <div id="4th-img" class="img"></div>
+                            <div id="4th-description"></div>
+                            <div id="4th-temp"></div>
+
+                            <!-- The Modal -->
+                            <div id="myModal4" class="modal4">
+
+                             <!-- Modal content -->
+                                <div class="modal4-content">
+                                    <div class="header-4th">
+                                        <span class="close4">&times;</span>
+                                        <h2>More details</h2>
+                                    </div>
+                                    <div class="modal4-body">
+                                        <div id="4th-pressure"> </div>
+                                        <div id="4th-pressure"> </div>
+                                        <div id="4th-humidity"></div>
+                                        <div id="4th-windspeed"></div>
+                                        <div id="4th-clouds"></div>
+                                    </div>
+                                    <div class="modal4-footer">
+                                    <h2></h2>
+                                    </div>
+                                </div> 
+                            </div>
+                    </div>
+
+                    
+                    <!-- weather in 5 days -->
+                    <div id="forecast-5th" class="forecast-5th">
+                            <h1 id="5th-when"></h1>
+                            <div id="5th-img" class="img"></div>
+                            <div id="5th-description"></div>
+                            <div id="5th-temp"></div>
+
+                            <!-- The Modal -->
+                            <div id="myModal5" class="modal5">
+
+                             <!-- Modal content -->
+                                <div class="modal5-content">
+                                    <div class="header-5th">
+                                        <span class="close5">&times;</span>
+                                        <h2>More details</h2>
+                                    </div>
+                                    <div class="modal5-body">
+                                        <div id="5th-pressure"> </div>
+                                        <div id="5th-humidity"></div>
+                                        <div id="5th-windspeed"></div>
+                                        <div id="5th-clouds"></div>
+                                    </div>
+                                    <div class="modal5-footer">
+                                        <h2></h2>
+                                    </div>
+                                </div> 
+                             </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="footer">
+                <div>Copyright &copy; 2019 <a href="https://www.linkedin.com/in/karol-szpek/">Karol Szpek</a> /</div>
+                <div><a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by dimas_sugih - www.freepik.com</a> /</div>
+                <div><a target="_blank" rel="noopener noreferrer" href="https://iconify.design/about/">Icons by iconify.design </a></div>  
+            </div>
+        </div>
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>
