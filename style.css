@@ -64,6 +64,10 @@ html {
     justify-content: space-evenly;
 }
 
+.img:hover {
+    cursor: pointer;
+}
+
 .forecast-tommorow > .img:hover {
     transform: scale(1.1);
 }
