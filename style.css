@@ -43,6 +43,7 @@ html {
     max-height: 5vh;
     align-self: end;
     margin: 1vh;
+    max-width: 90vw;
 }
 
 .weatherMain {
@@ -62,10 +63,6 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-
-.img:hover {
-    cursor: pointer;
 }
 
 .forecast-tommorow > .img:hover {
