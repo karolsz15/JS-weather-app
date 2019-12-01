@@ -40,16 +40,11 @@ html {
 }
 
 .searchControl {
+    max-height: 5vh;
+    margin: 1vh;
     display: flex;
     align-self: flex-end;
     max-width: 80vw;
-}
-
-.searchControl {
-    max-height: 5vh;
-    align-self: end;
-    margin: 1vh;
-    max-width: 90vw;
 }
 
 .weatherMain {
@@ -270,5 +265,13 @@ text-decoration: underline;
 
   .iconify {
     font-size: 1.5rem;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+    font-size: 0.7rem;
 }
 }

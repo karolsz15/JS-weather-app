@@ -17,12 +17,14 @@
         
         <!-- Top container with searchbar, buttons and background logo -->
         <div id="searchContainer" class="searchContainer">
-            <input type="text" class="searchControl" id="searchInput" placeholder="e.g. Warsaw">
-            <input type="button" class="searchControl" id="searchBtn" value="Get Weather">
-            <input type="button" class="searchControl" id="locationBtn" value="Get Location">
+            <div class="searchControl">
+                <input type="text" id="searchInput" placeholder="e.g. Warsaw">
+                <input type="button" id="searchBtn" value="Get Weather">
+                <input type="button" id="locationBtn" value="Get Location">
+            </div>  
         </div>
 
-        <!-- 2nd container with all the restof the content -->
+        <!-- 2nd container with all the rest of the content -->
         <div class="weatherContainer">
                 
                 <!-- Weather at the moment -->
@@ -161,45 +163,14 @@
                                 </div> 
                             </div>
                     </div>
-
-<!--       
-                    weather in 5 days
-                    <div id="forecast-5th" class="forecast-5th">
-                            <h1 id="5th-when"></h1>
-                            <div id="5th-img" class="img"></div>
-                            <div id="5th-description"></div>
-                            <div id="5th-temp"></div>
-
-                            The Modal
-                            <div id="myModal5" class="modal5">
-
-                             Modal content
-                                <div class="modal5-content">
-                                    <div class="header-5th">
-                                        <span class="close5">&times;</span>
-                                        <h2>More details</h2>
-                                    </div>
-                                    <div class="modal5-body">
-                                        <div id="5th-pressure"> </div>
-                                        <div id="5th-humidity"></div>
-                                        <div id="5th-windspeed"></div>
-                                        <div id="5th-clouds"></div>
-                                    </div>
-                                    <div class="modal5-footer">
-                                        <h2></h2>
-                                    </div>
-                                </div> 
--->
-                             </div>
-                    </div>
                 </div>
+                <div class="footer">
+                        <div>Copyright &copy; 2019 <a href="https://www.linkedin.com/in/karol-szpek/">Karol Szpek</a> /</div>
+                        <div><a href="https://www.freepik.com/free-photos-vectors/icon">vector by dimas_sugih - freepik.com</a> /</div>
+                        <div><a target="_blank" rel="noopener noreferrer" href="https://iconify.design/about/">Icons by iconify.design </a></div>  
+                </div>
+            </div>
             
-            </div>
-            <div class="footer">
-                <div>Copyright &copy; 2019 <a href="https://www.linkedin.com/in/karol-szpek/">Karol Szpek</a> /</div>
-                <div><a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by dimas_sugih - www.freepik.com</a> /</div>
-                <div><a target="_blank" rel="noopener noreferrer" href="https://iconify.design/about/">Icons by iconify.design </a></div>  
-            </div>
         </div>
     </div>
       <script src="script.js"></script>
