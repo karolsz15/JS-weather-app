@@ -40,6 +40,10 @@ html {
 }
 
 .searchControl {
+    align-self: flex-end;
+}
+
+.searchControl {
     max-height: 5vh;
     align-self: end;
     margin: 1vh;

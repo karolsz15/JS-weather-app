@@ -2,12 +2,11 @@
 let appId = '4ec34d45c36f6fee7fb9427c490b032c';
 
 // Get the searchbar and buttons
-let searchTerm = document.getElementById("searchInput").value;
 let button1 = document.getElementById("searchBtn");
 let button2 = document.getElementById("locationBtn");
 
 //Get Weather and Get Location buttons listeners
-button1.addEventListener("click", searchFutureWeather.bind(null, searchTerm), false);
+button1.addEventListener("click", searchFutureWeather);
 button2.addEventListener("click", geoFindMe);
 
 // Get the modal
@@ -69,7 +68,9 @@ window.onclick = function(event) {
 // function gets data from the API based on the searchTerm and 
 //calls drawWeatherPattern for (data, time, DOM element fraction of id or class)
 
-function searchFutureWeather(searchTerm) {
+function searchFutureWeather() {
+    let searchTerm = document.getElementById("searchInput").value;
+
 	fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchTerm}&mode=json&appid=${appId}`)  
 	.then(function(resp) { return resp.json() }) // Convert data to json
 	.then(function(data) {
