@@ -49,8 +49,8 @@ html {
 
 .searchInput, .searchBtn, .locationBtn {
     max-width: 27vw;
-    font-size: 1rem;
-    padding: 0.3rem;
+    font-size: 1em;
+    padding: 0.3em;
 }
 
 .searchBtn:hover, .locationBtn:hover  {
@@ -61,7 +61,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;  
-    font-size: 3rem;
+    font-size: 3em;
     border-radius: 20px;
     background-color: white;
     min-width: 30vw;
