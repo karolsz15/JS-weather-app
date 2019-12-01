@@ -47,6 +47,11 @@ html {
     max-width: 80%;
 }
 
+.searchInput, .searchBtn, .locationBtn {
+    max-width: 27vw;
+    font-size: 1rem;
+}
+
 .weatherMain {
     display: flex;
     flex-direction: column;
@@ -258,6 +263,11 @@ text-decoration: underline;
         align-self: flex-end;
         margin: 0.2vw;
         max-width: 80%;
+    }
+
+    .searchInput, .searchBtn, .locationBtn {
+        font-size: 0.8rem;
+        padding-left: 0.3rem;
     }
 
     .header-tommorow, .header-2nd, .header-3rd, .header-4th, .header-5th {
