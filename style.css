@@ -254,6 +254,8 @@ text-decoration: underline;
     }
 
     .searchControl {
+        max-height: 5vh;
+        align-self: flex-end;
         margin: 0.2vw;
     }
 
