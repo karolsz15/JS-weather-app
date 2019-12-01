@@ -43,7 +43,7 @@ html {
     max-height: 5vh;
     margin: 1vh;
     display: flex;
-    justify-self: flex-end;
+    align-self: flex-end;
     max-width: 80vw;
 }
 
@@ -246,7 +246,7 @@ text-decoration: underline;
         max-width: 80vw;
     }
 
-    #searchContainer {
+    .searchContainer {
         min-height: 20vh;
         display: flex;
         justify-content: center;
@@ -254,9 +254,11 @@ text-decoration: underline;
     }
 
     .searchControl {
-        max-height: 5vh;
-        align-self: end;
         margin: 0.2vw;
+    }
+
+    .header-tommorow, .header-2nd, .header-3rd, .header-4th, .header-5th {
+        font-size: 1rem;
     }
 
    .modal1-body, .modal2-body, .modal3-body, .modal4-body, .modal5-body {
