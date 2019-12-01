@@ -1,4 +1,4 @@
-/******************************* The Body ******************************/
+/* THE BODY */
 
 html {
     box-sizing: border-box;
@@ -140,7 +140,7 @@ a:active {
 text-decoration: underline;
 }
 
-/***************************** The Modal (background) ******************************/
+/* The Modal (background) */
 
 .modal1, .modal2, .modal3, .modal4, .modal5 {
     display: none; /* Hidden by default */
@@ -243,35 +243,14 @@ text-decoration: underline;
       background-image: linear-gradient( to right, rgb(111,195,239), rgb(35,36,80));
       color: white;
   }
-/*
-  .footer > a {
-    color: white;
-  }
 
-  .footer > a:link {
-    color: white; 
-  }
-
-  .footer > a:visited {
-    color: white;  
-  }
-
-  .footer > a:hover {
-    color: white;  
-  }
-
-  .footer > a:active{
-    color: white;    
-  }
-
-*/
   .footer > div {
     margin: 0.2rem;
   }
 
   
 
-  /*********************** MOBILE */
+  /* MOBILE */
   @media only screen and (max-width : 480px) {
 
     .weatherMain {
