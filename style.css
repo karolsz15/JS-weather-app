@@ -43,7 +43,7 @@ html {
     max-height: 5vh;
     margin: 1vh;
     display: flex;
-    align-self: flex-end;
+    justify-self: flex-end;
     max-width: 80vw;
 }
 
