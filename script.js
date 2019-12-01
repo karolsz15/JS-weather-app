@@ -56,14 +56,16 @@ window.onclick = (event) => {
 //calls drawWeatherPattern for (data, time, DOM element fraction of id or class)
 
 const searchFutureWeather = () => {
+    //get the input value from the #searchInput searchbar
     let searchTerm = document.getElementById("searchInput").value;
 
+    //fetch data for given searchTerm
 	fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchTerm}&mode=json&appid=${appId}`)  
 	.then(function(resp) { return resp.json() }) // Convert data to json
 	.then(function(data) {
+
         //data in the API is devided in 3h periods, so time=0 stands for now, time=8 stands for 24h from now and so on...
         //third parameter is used to acces proper DOM elements e.g. <div id="forecast-tommorow"></div>
-
         drawWeatherPattern(data, 0, 'now');
         drawWeatherPattern(data, 8, 'tommorow');
         drawWeatherPattern(data, 16, '2nd');
@@ -71,7 +73,7 @@ const searchFutureWeather = () => {
         drawWeatherPattern(data, 32, '4th');
 	})
 	.catch(function() {
-		// catch any errors
+		//catch any errors
 	});
 };
 
@@ -129,13 +131,14 @@ document.getElementById("searchInput").addEventListener("keypress", (e) => {
 //and calls drawWeatherPattern for (data, time, DOM element fraction of id or class)
 
 const getWeatherByLocation = (lat, lon) => {
+
+    //fetch data for given coords
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&mode=json&appid=${appId}`)  
 	.then(function(resp) { return resp.json() }) // Convert data to json
 	.then(function(data) {
 
         //data in the API is devided in 3h periods, so time=0 stands for now, time=8 stands for 24h from now and so on...
         //third parameter is used to acces proper DOM elements e.g. <div id="forecast-tommorow"></div>
-
         drawWeatherPattern(data, 0, 'now');
         drawWeatherPattern(data, 8, 'tommorow');
         drawWeatherPattern(data, 16, '2nd');
@@ -143,7 +146,7 @@ const getWeatherByLocation = (lat, lon) => {
         drawWeatherPattern(data, 32, '4th');
 	})
 	.catch(function() {
-		// catch any errors
+		//catch any errors
 	});
 };
 
