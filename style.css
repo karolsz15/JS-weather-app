@@ -40,7 +40,9 @@ html {
 }
 
 .searchControl {
+    display: flex;
     align-self: flex-end;
+    max-width: 80vw;
 }
 
 .searchControl {
