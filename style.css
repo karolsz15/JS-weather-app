@@ -50,7 +50,7 @@ html {
 .searchInput, .searchBtn, .locationBtn {
     max-width: 27vw;
     font-size: 1em;
-    padding: 0.3em;
+    padding-bottom: 0.2em;
 }
 
 .searchBtn:hover, .locationBtn:hover  {
