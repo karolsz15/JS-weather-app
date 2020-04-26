@@ -8,6 +8,11 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    font: 90% Helvetica, sans-serif;
+    color: #333;
+}
+
 .wrapper {
     background-color: #f4f4f4;
     border: solid black 1px;
@@ -27,6 +32,10 @@ html {
     display: flex;
     justify-content: center;
 
+}
+
+.weatherContainer {
+    display: none;
 }
 
 .searchContainer {
@@ -153,7 +162,7 @@ text-decoration: underline;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    font-size: 2rem;
+    font-size: 1rem;
   }
   
   /* Modal Content/Box */
@@ -162,15 +171,14 @@ text-decoration: underline;
     flex-direction: column;
     justify-content: space-between;
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    margin: 5vh auto;
     border: 1px solid #888;
     width: 60%;
-    height: 60%;
+    max-height: 90vh;
     border-radius: 20px;
-    overflow: hidden;
-    top: 10%;
-    
+    overflow: auto;
+    animation-name: animatetop;
+    animation-duration: 0.4s
   }
   
   /* The Close Buttons */
@@ -198,7 +206,7 @@ text-decoration: underline;
   /* Modals' Body */
   .modal1-body, .modal2-body, .modal3-body, .modal4-body, .modal5-body {
       padding: 2px 16px;
-      font-size: 4rem;
+      font-size: 2rem;
       text-align: center;
     }
   
@@ -211,21 +219,19 @@ text-decoration: underline;
   }
   
   /* Modals' Content */
-  .modal1-content, .modal2-content, .modal3-content, .modal4-content, .modal5-content {
+  /* .modal1-content, .modal2-content, .modal3-content, .modal4-content, .modal5-content {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    position: relative;
     background-color: #fefefe;
-    margin: auto;
+    margin: 10vhauto;
     padding: 0;
     border: 1px solid #888;
-    width: auto;
     max-width: 80vw;;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
-  }
+  } */
   
   /* Add Animation */
   @keyframes animatetop {
