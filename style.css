@@ -23,6 +23,25 @@ body {
     overflow: hidden;
 }
 
+.welcomeContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem .5rem;
+    align-items: center;
+}
+
+.welcome-img {
+    border-radius: 1em;
+    max-width: 90vw;
+}
+
+.hidden {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
 .iconify {
     font-size: 2rem;
     margin-right: 1rem;
@@ -31,7 +50,6 @@ body {
 .currentWeather {
     display: flex;
     justify-content: center;
-
 }
 
 .weatherContainer {
@@ -152,20 +170,20 @@ text-decoration: underline;
 /* The Modal (background) */
 
 .modal1, .modal2, .modal3, .modal4, .modal5 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
     font-size: 1rem;
   }
   
-  /* Modal Content/Box */
+  /* Modal Content Box */
   .modal1-content, .modal2-content, .modal3-content, .modal4-content, .modal5-content {
     display: flex;
     flex-direction: column;
@@ -198,7 +216,7 @@ text-decoration: underline;
 
    /* Modal Headers */
 .header-tommorow, .header-2nd, .header-3rd, .header-4th, .header-5th {
-    padding: 2rem;
+    padding: 1.5rem .5rem;
     background-image: linear-gradient( to right, rgb(111,195,239), rgb(35,36,80));
     color: white;
   }
@@ -218,22 +236,8 @@ text-decoration: underline;
     justify-self: flex-end;
   }
   
-  /* Modals' Content */
-  /* .modal1-content, .modal2-content, .modal3-content, .modal4-content, .modal5-content {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    background-color: #fefefe;
-    margin: 10vhauto;
-    padding: 0;
-    border: 1px solid #888;
-    max-width: 80vw;;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  } */
   
-  /* Add Animation */
+  /* Animation */
   @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
@@ -254,9 +258,29 @@ text-decoration: underline;
     margin: 0.2rem;
   }
 
-  
+  /* MOBILE LANDSCAPE */
+  @media only screen and (max-width : 750px) {
 
-  /* MOBILE */
+    .modal1-content, .modal2-content, .modal3-content, .modal4-content, .modal5-content {
+        width: 90%;
+    }
+    
+    .modal1-body {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+    }
+
+    .header-tommorow, .header-2nd, .header-3rd, .header-4th, .header-5th {
+        padding: .5rem 0;
+    }
+
+    .close1, .close2, .close3, .close4, .close5 {
+        font-size: 3rem;
+        padding: .5rem;
+    }
+  }
+
+  /* MOBILE PORTRAIT */
   @media only screen and (max-width : 480px) {
 
     .weatherMain {
@@ -292,9 +316,9 @@ text-decoration: underline;
         font-size: 1rem;
     }
 
-   .modal1-body, .modal2-body, .modal3-body, .modal4-body, .modal5-body {
-    font-size: 1rem;
-   }
+    .modal1-body {
+        grid-template-columns: 1fr;
+  }
 
     .iconify {
     font-size: 1.5rem;

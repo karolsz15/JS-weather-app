@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="style.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
     <!-- External stylesheet to use weather icons -->
-  <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
-
-  <title>Wheather App by Karol Szpek</title>
-  
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+    <title>Wheather App by Karol Szpek</title>
 </head>
+
 <body>
-    <div class="wrapper">
+    <main class="wrapper">
         
         <!-- Top container with searchbar, buttons and background logo -->
-        <div id="searchContainer" class="searchContainer">
+        <header id="searchContainer" class="searchContainer">
             <div class="searchControl">
                 <input type="text" class="searchInput" id="searchInput" placeholder="e.g. Warsaw">
                 <input type="button" class="searchBtn" id="searchBtn" value="Get Weather">
                 <input type="button" class="locationBtn" id="locationBtn" value="Get Location">
             </div>  
-        </div>
+        </header>
+
+        <section class="welcomeContainer" id="welcomeContainer">
+            <h1>Search by city name or location!</h1>
+            <img src="./img/welcome.png" class="welcome-img" alt="drawing of smiling two clouds">
+        </section>
 
         <!-- 2nd container with all the rest of the content -->
-        <div class="weatherContainer" id="weatherContainer">
+        <section class="weatherContainer" id="weatherContainer">
                 
                 <!-- Weather at the moment -->
-                <div class="currentWeather">
-                <div class="weatherMain">
+                <section class="currentWeather">
+                    <div class="weatherMain">
                         <a id = "map-link" target="_blank"></a>
                         <div id="location"></div>
                         <div id="now-when"></div>
@@ -39,12 +42,18 @@
                         <div id="now-pressure"> </div>
                         <div id="now-humidity"></div>
                         <div id="now-windspeed"></div>
-                        <div id="now-clouds"></div>
+                        <div id="now-clouds"></div>   
                     </div> 
-                </div>
+                    <span class="hidden">
+                        <span id="now-when2"></span>
+                        <span id="now-img2" class="img"></span>
+                        <span id="now-description2"></span>
+                        <span id="now-temp2"></span>
+                    </span>
+                </section>
                 
                 <!-- Future days container -->
-                <div class="futureWeather">
+                <section class="futureWeather">
 
                     <!-- Tommorow / weather in 1 day-->
                     <div id="forecast-tommorow" class="forecast-tommorow">
@@ -63,10 +72,18 @@
                                             <h2>More details</h2>
                                         </div>
                                         <div class="modal1-body">
-                                            <div id="tommorow-pressure"></div>
-                                            <div id="tommorow-humidity"></div>
-                                            <div id="tommorow-windspeed"></div>
-                                            <div id="tommorow-clouds"></div>
+                                            <div class="column">
+                                                <div id="tommorow-when2"></div>
+                                                <div id="tommorow-img2" class="img"></div>
+                                            </div>
+                                            <div class="column">
+                                                <div id="tommorow-description2"></div>
+                                                <div id="tommorow-temp2"></div>
+                                                <div id="tommorow-pressure"></div>
+                                                <div id="tommorow-humidity"></div>
+                                                <div id="tommorow-windspeed"></div>
+                                                <div id="tommorow-clouds"></div>
+                                            </div>
                                         </div>
                                         <div class="modal1-footer">
                                             <h2></h2>
@@ -92,7 +109,12 @@
                                         <h2>More details</h2>
                                     </div>
                                     <div class="modal2-body">
-                                            <div id="2nd-pressure"> </div>
+
+                                            <div id="2nd-when2"></div>
+                                            <div id="2nd-img2" class="img"></div>
+                                            <div id="2nd-description2"></div>
+                                            <div id="2nd-temp2"></div>
+
                                             <div id="2nd-pressure"> </div>
                                             <div id="2nd-humidity"></div>
                                             <div id="2nd-windspeed"></div>
@@ -122,6 +144,12 @@
                                         <h2>More details</h2>
                                     </div>
                                     <div class="modal3-body">
+
+                                            <div id="3rd-when2"></div>
+                                            <div id="3rd-img2" class="img"></div>
+                                            <div id="3rd-description2"></div>
+                                            <div id="3rd-temp2"></div>
+
                                             <div id="3rd-pressure"> </div>
                                             <div id="3rd-humidity"></div>
                                             <div id="3rd-windspeed"></div>
@@ -151,7 +179,12 @@
                                         <h2>More details</h2>
                                     </div>
                                     <div class="modal4-body">
-                                        <div id="4th-pressure"> </div>
+
+                                        <div id="4th-when2"></div>
+                                        <div id="4th-img2" class="img"></div>
+                                        <div id="4th-description2"></div>
+                                        <div id="4th-temp2"></div>
+
                                         <div id="4th-pressure"> </div>
                                         <div id="4th-humidity"></div>
                                         <div id="4th-windspeed"></div>
@@ -163,17 +196,16 @@
                                 </div> 
                             </div>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
             
-            <div class="footer">
+            <footer class="footer">
                 <div>Copyright &copy; 2019 <a href="https://www.linkedin.com/in/karol-szpek/">Karol Szpek</a> / </div>
                 <div><a href="https://www.freepik.com/free-photos-vectors/icon"> vector by dimas_sugih - freepik.com</a> / </div>
                 <div><a target="_blank" rel="noopener noreferrer" href="https://iconify.design/about/"> Icons by iconify.design </a></div>  
-        </div>
+            </footer>
         
-        </div>
-    </div>
-      <script src="script.js"></script>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

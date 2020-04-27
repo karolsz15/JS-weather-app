@@ -11,11 +11,22 @@ const modal2 = document.getElementById("myModal2");
 const modal3 = document.getElementById("myModal3");
 const modal4 = document.getElementById("myModal4");
 
+//Get the weather container divs
+const weatherContainer = document.getElementById("weatherContainer");
+const welcomeContainer = document.getElementById("welcomeContainer");
+
+//Show all forecast divs when one of the search buttons is clicked (divs are hidden by default)
+
+button1.onclick = () => {weatherContainer.style.display = "block";};
+button2.onclick = () => {weatherContainer.style.display = "block";};
+button1.onclick = () => {weatherContainer.style.display = "block";};
+button2.onclick = () => {weatherContainer.style.display = "block";};
+
 // Get the button that opens the modal
-const btn1 = document.getElementsByClassName("img")[0];
-const btn2 = document.getElementsByClassName("img")[1];
-const btn3 = document.getElementsByClassName("img")[2];
-const btn4 = document.getElementsByClassName("img")[3];
+const btn1 = document.getElementById('tommorow-img');
+const btn2 = document.getElementById('2nd-img');
+const btn3 = document.getElementById('3rd-img');
+const btn4 = document.getElementById('4th-img');
 
 // Get the <span> element that closes the modal
 const span1 = document.getElementsByClassName("close1")[0];
@@ -56,6 +67,10 @@ window.onclick = (event) => {
 //calls drawWeatherPattern for (data, time, DOM element fraction of id or class)
 
 const searchFutureWeather = () => {
+
+    //hide welcome heading and image
+    welcomeContainer.style.display = "none";
+
     //get the input value from the #searchInput searchbar
     let searchTerm = document.getElementById("searchInput").value;
 
@@ -82,6 +97,9 @@ const searchFutureWeather = () => {
 //gets coordinants and then calls getWeatherByLocation function
 
 const geoFindMe = () => {
+
+    //hide welcome heading and image
+    welcomeContainer.style.display = "none";
 
     const status = document.querySelector('#location');
     const mapLink = document.querySelector('#map-link');
@@ -178,9 +196,16 @@ const drawWeatherPattern = (d, time, dom) => {
     //change the DOM
     document.getElementById('location').innerHTML = d.city.name;
     document.getElementById(`${dom}-when`).textContent = `${dayName}`;
-    document.getElementById(`${dom}-img`).innerHTML = `<img src=${picture}>`;
+    document.getElementById(`${dom}-img`).innerHTML = `<img src=${picture} alt="${d.list[time].weather[0].description}">`;
 	document.getElementById(`${dom}-description`).innerHTML = d.list[time].weather[0].description;
-	document.getElementById(`${dom}-temp`).innerHTML = celcius + '&deg;';
+    document.getElementById(`${dom}-temp`).innerHTML = celcius + '&deg;';
+    
+    //popup modal
+    document.getElementById(`${dom}-when2`).textContent = `${dayName}`;
+    document.getElementById(`${dom}-img2`).innerHTML = `<img src=${picture} alt="${d.list[time].weather[0].description}">`;
+	document.getElementById(`${dom}-description2`).innerHTML = d.list[time].weather[0].description;
+    document.getElementById(`${dom}-temp2`).innerHTML = celcius + '&deg;';
+    
     document.getElementById(`${dom}-pressure`).innerHTML = '<span class="iconify" data-icon="wi:barometer" data-inline="false"></span>' + d.list[time].main.pressure + ' hPa';
     document.getElementById(`${dom}-humidity`).innerHTML = '<span class="iconify" data-icon="wi:humidity" data-inline="false"></span>' + d.list[time].main.humidity + ' %';
     document.getElementById(`${dom}-windspeed`).innerHTML = '<span class="iconify" data-icon="fa-solid:wind" data-inline="false"></span>' + d.list[time].wind.speed + ' m/s';
