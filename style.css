@@ -261,13 +261,21 @@ text-decoration: underline;
   /* MOBILE LANDSCAPE */
   @media only screen and (max-width : 750px) {
 
+    .weatherMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.5rem;
+        width: 90%;
+    }
+
     .modal1-content, .modal2-content, .modal3-content, .modal4-content, .modal5-content {
         width: 90%;
     }
     
-    .modal1-body {
+    .modal1-body, .modal2-body, .modal3-body, .modal4-body {
           display: grid;
           grid-template-columns: 1fr 1fr;
+          font-size: 1.5rem;
     }
 
     .header-tommorow, .header-2nd, .header-3rd, .header-4th, .header-5th {
@@ -284,11 +292,10 @@ text-decoration: underline;
   @media only screen and (max-width : 480px) {
 
     .weatherMain {
-        font-size: 1.5rem;
-        min-width: 90vw;
-        max-width: 90vw;
+        display: flex;
+        flex-direction: column;
     }
-
+    
     .futureWeather > div {
         min-width: 80vw;
         max-width: 80vw;
