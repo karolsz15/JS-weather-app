@@ -1,3 +1,5 @@
+LIVE: https://karolsz15.github.io/JS-weather-app/
+
 The application gets the data from the external Open Weather Map API (https://openweathermap.org/).
 
 It uses two APIs to:
