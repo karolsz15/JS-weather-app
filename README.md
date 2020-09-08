@@ -31,7 +31,7 @@ User can click on seperate days icons to get more detailed information about the
 <img src="screenshots/mobile-portrait.png" alt="mobile portrait view" width="50%"/> <hr/>
 
 ### 5. Mobile landsape view
-<img src="screenshots/mobile-landscape.png" alt="mobile landscape view" width="50%"/> <hr/>
+<img src="screenshots/mobile-landscape.png" alt="mobile landscape view" width="70%"/> <hr/>
 
 
 
