@@ -22,16 +22,16 @@ User can click on seperate days icons to get more detailed information about the
 <img src="screenshots/desktop.png" alt="desktop view" height="50%"/> <hr/>
 
 ### 2. Tablet portrait view
-<img src="screenshots/tablet-portrait.png" alt="tablet portrait view" height="50%"/> <hr/>
+<img src="screenshots/tablet-portrait.png" alt="tablet portrait view" width="50%"/> <hr/>
 
 ### 3. Tablet landsape view
 <img src="screenshots/tablet-landscape.png" alt="tablet landscape view" height="50%"/> <hr/>
 
 ### 4. Mobile portrait view
-<img src="screenshots/mobile-portrait.png" alt="mobile portrait view" height="50%"/> <hr/>
+<img src="screenshots/mobile-portrait.png" alt="mobile portrait view" width="50%"/> <hr/>
 
 ### 5. Mobile landsape view
-<img src="screenshots/mobile-landscape.png" alt="mobile landscape view" height="50%"/> <hr/>
+<img src="screenshots/mobile-landscape.png" alt="mobile landscape view" width="50%"/> <hr/>
 
 
 
